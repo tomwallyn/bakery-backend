@@ -109,6 +109,17 @@ paths:
       tags:
         - products
       summary: Find All Products
+      parameters:
+        - name: category
+          in: query
+          description: The name of category you want filter
+          schema:
+            type: string
+        - name: name
+          in: query
+          description: The name of product you want filter (return similarity >= 50%)
+          schema:
+            type: string
       responses:
         200:
           description: 'OK'

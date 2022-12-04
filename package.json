@@ -1,6 +1,6 @@
 {
   "name": "bakery-backend",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "TypeScript + Express API Server",
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "string-similarity-js": "^2.1.4",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.5.0",
     "winston": "^3.8.1",
