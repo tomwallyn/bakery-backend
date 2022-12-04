@@ -2,13 +2,17 @@ import { NextFunction, Request, Response } from 'express';
 import { Product } from '@interfaces/product.interface';
 import productService from '@services/products.service';
 import {CreateProductDto} from "@dtos/product.dto";
+import { stringSimilarity } from "string-similarity-js";
 
 class ProductsController {
   public productService = new productService();
 
   public getProducts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const findAllUsersData: Product[] = await this.productService.findAllProduct();
+      let findAllUsersData: Product[] = await this.productService.findAllProduct();
+
+      if (req.query.category) findAllUsersData = findAllUsersData.filter(produit => produit.categories == req.query.category);
+      if (req.query.name) findAllUsersData =  findAllUsersData.filter(produit => stringSimilarity(produit.name, <string>req.query.name) >= 0.5);
 
       res.status(200).json({ data: findAllUsersData, message: 'findAll' });
     } catch (error) {

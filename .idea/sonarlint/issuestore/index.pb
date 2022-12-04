@@ -7,12 +7,8 @@ C
 src/config/index.ts,0/3/032e57e0fe40d4bfbf61efe7d8bd9c8ac84c077b
 R
 "src/interfaces/routes.interface.ts,c/c/cc394ca1b4b5c2601abdeb6556b54e0f69e94e05
-U
-%src/controllers/product.controller.ts,7/2/72ca58ef9007c2e5f56e1a94d3ab147c24a20f45
 H
 src/utils/validateEnv.ts,4/5/452ccd70cea3b749842dfe09403833b2e3fe3cd6
-K
-src/routes/product.route.ts,b/0/b034ede63ec82587fd8980f79a038b8443382cd5
 I
 src/routes/index.route.ts,9/7/9704bb783d6cea69b395191fe2655c3171fb5b8f
 H
